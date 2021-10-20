@@ -1,0 +1,23 @@
+#Events .header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/events.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* width: 100%; */
+    height: 80vh; 
+}
+
+#Events .header-content {
+    color: white;
+    height: 100%;
+}
+
+#Events .media {
+    height: 200px;
+}
+
+#Events .event-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

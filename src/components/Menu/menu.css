@@ -1,0 +1,51 @@
+#menu .app-bar {
+    /* background-color: #2a9df4; */
+    /* background: transparent; */
+    color: #333;
+    box-shadow: none;
+
+}
+
+#menu .logo { 
+    /* flex-grow: 1; */
+}
+
+#menu .nav-links {
+    flex-grow: 1;
+    padding-left: 50px;
+}
+
+#menu .link, .link-popover {
+    text-decoration: none;
+    color: #333;
+}
+
+#menu .link { 
+    padding: 10px;
+}
+
+#menu .link:hover, .link-popover:hover {
+    color: #2a9df4 !important;
+}
+
+#menu .active-link, .active-link-popover {
+    color: #333;
+    border-bottom: 2px solid #2a9df4;
+}
+
+#menu .media:hover {
+    color: #2a9df4;
+}
+
+.list-popover {
+    background: white;
+}
+
+#menu .media {
+    padding-right: 5px;
+    color: #333;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
