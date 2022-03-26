@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+// import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 // import Donation from './components/Donation';
-import Events from './components/Events';
+// import Events from './components/Events';
 // import Partners from './components/Partners';
-import Success from './components/SuccessStories';
-import Team from './components/Team';
-import Navbar from './components/Menu';
+// import Success from './components/SuccessStories';
+// import Team from './components/Team';
+// import Navbar from './components/Menu';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -16,20 +16,22 @@ class App extends Component {
     return (
       <div className="App">
       {/* <div className="App container"> */}
-        <Router>
+        {/* <Router>
           <div>
             <Navbar />
             <Switch>
               <Route path="/" exact component={Home} />
-              {/* <Route path="/donation" component={Donation} /> */}
+              <Route path="/donation" component={Donation} />
               <Route path="/events" component={Events} />
-              {/* <Route path="/partners" component={Partners} /> */}
+              <Route path="/partners" component={Partners} />
               <Route path="/success" component={Success} />
               <Route path="/team" component={Team} />
             </Switch>
             <Footer />
           </div>
-        </Router>
+        </Router> */}
+        <Home />
+        <Footer />
       </div>
     );
   }

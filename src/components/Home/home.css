@@ -1,13 +1,23 @@
 #Home .header {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/hero.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/hero-image.png);
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; */
+    position: relative; 
     background-color: #d5edff;
     height: 80vh;
     /* width: 100%; */
     /* height: 100%;  */
+}
+
+#Home .media {
+    padding-right: 5px;
+    color: whitesmoke;
+}
+
+#Home .media:hover {
+    color: rgb(125, 172, 235);
 }
 
 #Home .header-content {
