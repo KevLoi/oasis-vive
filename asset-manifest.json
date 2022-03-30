@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/oasis-vive/static/css/main.8bf07f40.chunk.css",
-    "main.js": "/oasis-vive/static/js/main.f1beaffd.chunk.js",
-    "main.js.map": "/oasis-vive/static/js/main.f1beaffd.chunk.js.map",
+    "main.js": "/oasis-vive/static/js/main.9d03a9ab.chunk.js",
+    "main.js.map": "/oasis-vive/static/js/main.9d03a9ab.chunk.js.map",
     "runtime-main.js": "/oasis-vive/static/js/runtime-main.18f20735.js",
     "runtime-main.js.map": "/oasis-vive/static/js/runtime-main.18f20735.js.map",
     "static/css/2.4f8976c6.chunk.css": "/oasis-vive/static/css/2.4f8976c6.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.4f8976c6.chunk.css",
     "static/js/2.55f4a361.chunk.js",
     "static/css/main.8bf07f40.chunk.css",
-    "static/js/main.f1beaffd.chunk.js"
+    "static/js/main.9d03a9ab.chunk.js"
   ]
 }
