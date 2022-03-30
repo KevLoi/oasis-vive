@@ -6,7 +6,7 @@
     background-size: cover;
     position: relative; 
     background-color: #d5edff;
-    height: 80vh;
+    height: 100vh;
     /* width: 100%; */
     /* height: 100%;  */
 }
@@ -45,14 +45,10 @@
     padding-bottom: 40px;
 }
 
-#Home .spotlight-header {
-    background-color: #2a9df4;
-    color: white;
-}
-
-#Home .spotlight {
+#Home .scholarship {
     padding: 40px;
     margin-top: -40px;
+    opacity: 85%;
 }
 
 #Home .donation-btn {
@@ -81,4 +77,48 @@
     margin-bottom: 5px;
     transition: 0.3s ease-in-out;
 
+}
+
+#scholarship {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/hero-image.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+    background-color: #d5edff;
+    /* height: 85vh; */
+}
+
+#oasis-stats .stats-box {
+    background-color: #2a9df4 !important;
+    padding: 15px;
+}
+
+#oasis-stats .stats-box {
+    color: whitesmoke;
+}
+
+.apply-button {
+    padding: 8px 20px;
+    border-radius: 5em;
+    color: #2a9df4;
+    border: 2px solid #2a9df4;
+    background-color: white;
+    transition: 0.1s ease-in-out;
+}
+
+.apply-button:hover {
+    color: whitesmoke;
+    background-color: #2a9df4;
+    transition: 0.1s ease-in-out;
+}
+
+.contact-field {
+    color: #2a9df4 !important;
+    border: #2a9df4 !important;
+}
+
+a {
+    text-decoration: none !important;
 }
