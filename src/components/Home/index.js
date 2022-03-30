@@ -90,10 +90,10 @@ const Home = () => {
 				<div className="d-flex w-100">
 					<img src={logo} height="75px" width="auto" alt="logo" />
 					<div className="d-flex align-items-center justify-content-end" style={{flexGrow: '1'}}>
-						<a href="https://www.instagram.com/oasisvive/" className="media">
+						<a href="https://www.instagram.com/oasisvive/" className="media" target="_blank" rel="noopener noreferrer">
 							<InstagramIcon className="footer-icon" />
 						</a>
-						<a href="https://www.facebook.com/OasisLives/" className="media">
+						<a href="https://www.facebook.com/OasisLives/" className="media" target="_blank" rel="noopener noreferrer" >
 							<FacebookIcon className="footer-icon" />
 						</a>
 						{/* <a href="https://twitter.com" className="media">

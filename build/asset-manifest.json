@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/oasis-vive/static/css/main.2fa0984f.chunk.css",
-    "main.js": "/oasis-vive/static/js/main.f1beaffd.chunk.js",
-    "main.js.map": "/oasis-vive/static/js/main.f1beaffd.chunk.js.map",
+    "main.css": "/oasis-vive/static/css/main.8bf07f40.chunk.css",
+    "main.js": "/oasis-vive/static/js/main.9d03a9ab.chunk.js",
+    "main.js.map": "/oasis-vive/static/js/main.9d03a9ab.chunk.js.map",
     "runtime-main.js": "/oasis-vive/static/js/runtime-main.18f20735.js",
     "runtime-main.js.map": "/oasis-vive/static/js/runtime-main.18f20735.js.map",
     "static/css/2.4f8976c6.chunk.css": "/oasis-vive/static/css/2.4f8976c6.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.fccefb49.chunk.js.map": "/oasis-vive/static/js/3.fccefb49.chunk.js.map",
     "index.html": "/oasis-vive/index.html",
     "static/css/2.4f8976c6.chunk.css.map": "/oasis-vive/static/css/2.4f8976c6.chunk.css.map",
-    "static/css/main.2fa0984f.chunk.css.map": "/oasis-vive/static/css/main.2fa0984f.chunk.css.map",
+    "static/css/main.8bf07f40.chunk.css.map": "/oasis-vive/static/css/main.8bf07f40.chunk.css.map",
     "static/js/2.55f4a361.chunk.js.LICENSE.txt": "/oasis-vive/static/js/2.55f4a361.chunk.js.LICENSE.txt",
     "static/media/home.css": "/oasis-vive/static/media/hero-image.9c5236ae.png",
     "static/media/oasis-transparent.04cbd581.png": "/oasis-vive/static/media/oasis-transparent.04cbd581.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.18f20735.js",
     "static/css/2.4f8976c6.chunk.css",
     "static/js/2.55f4a361.chunk.js",
-    "static/css/main.2fa0984f.chunk.css",
-    "static/js/main.f1beaffd.chunk.js"
+    "static/css/main.8bf07f40.chunk.css",
+    "static/js/main.9d03a9ab.chunk.js"
   ]
 }
