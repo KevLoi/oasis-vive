@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import {
+    AppBar,
+    Toolbar,
+    Popover,
+    List,
+    ListItem,
+    ListItemText,
+    IconButton
+} from '@mui/material';
+import {
+    Instagram,
+    Facebook
+} from '@mui/icons-material';
+// import AppBar from '@material-ui/core/AppBar';
+// import Toolbar from '@material-ui/core/Toolbar';
 import logo from '../../images/oasis-transparent.png';
 import classNames from 'classnames';
 import './menu.css';
 import Hamburger from 'hamburger-react';
-// import Menu from '@material-ui/core/Menu';
-// import MenuItem from '@material-ui/core/MenuItem';
-import Popover from '@material-ui/core/Popover';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import IconButton from '@material-ui/core/IconButton';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-
 
 const links = [
     'Home',
@@ -55,13 +56,10 @@ const Navbar = (props) => {
         return (
             <>
                 <a href="https://instagram.com" className="media">
-                    <InstagramIcon className="footer-icon" />
+                    <Instagram className="footer-icon" />
                 </a>
                 <a href="https://facebook.com" className="media">
-                    <FacebookIcon className="footer-icon" />
-                </a>
-                <a href="https://twitter.com" className="media">
-                    <TwitterIcon className="footer-icon" />
+                    <Facebook className="footer-icon" />
                 </a>
             </>
         );

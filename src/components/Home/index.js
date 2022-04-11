@@ -1,16 +1,21 @@
-import { useRef, useState } from 'react';
-import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
-import './home.css';
+import { useEffect, useRef, useState } from 'react';
 import logo from '../../images/oasis-transparent.png';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-// import TwitterIcon from '@material-ui/icons/Twitter';
-import CheckRoundedIcon from '@material-ui/icons/CheckRounded';
-import DescriptionIcon from '@material-ui/icons/Description';
-import SendIcon from '@material-ui/icons/Send';
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
+import './home.css';
+import {
+	Backdrop,
+	CircularProgress,
+	Alert,
+	Paper,
+	Snackbar,
+	TextField
+} from '@mui/material';
+import {
+	Instagram, 
+	Facebook,
+	CheckRounded,
+	Description,
+	Send
+} from '@mui/icons-material';
 import emailjs from '@emailjs/browser';
 
 const ScholarshipRequirements = [
@@ -19,11 +24,7 @@ const ScholarshipRequirements = [
 	'Must graduate from an accredited institution within the state of California with a High School Diploma or General Equivalency Diploma',
 	'Must have verification of admittance to an accredited profit or nonprofit institution providing vocational, occupational, and technical or college education on either full-time or part-time basis',
 	'GPA requirement: 2.0 Cumulative'
-]
-
-function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+];
 
 const Home = () => {
 
@@ -32,6 +33,13 @@ const Home = () => {
 	const [contactMessage, setMessage] = useState('');
 	const [formResponse, setFormResponse] = useState(null);
 	const [showFormResponse, setShowFormResponse] = useState(false);
+	const [busy, setBusy] = useState(false);
+
+	useEffect(() => {
+		if ( busy ) {
+			sendForm();
+		}
+	}, [busy]);
 
 
 	const contactForm = useRef();
@@ -52,6 +60,21 @@ const Home = () => {
 		return email.length > 0 && !String(email).match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/);
 	}
 
+	const sendForm = () => {
+		console.log('submitting form');
+		emailjs.sendForm('service_rexzi6j', 'template_3uj95nn', contactForm.current, 'yfXGSGjBp-1KKRm84')
+			.then(res => {
+				setBusy(false);
+				setFormResponse(res.status === 200);
+				setShowFormResponse(true);
+			}, err => {
+				setBusy(false);
+				setFormResponse(false);
+				setShowFormResponse(true);
+				console.error(err);
+			})
+	}
+
 	const submitForm = (e) => {
 		e.preventDefault();
 
@@ -65,17 +88,9 @@ const Home = () => {
 		if ( !contactMessage ) hasMessageError = true;
 
 		if ( !hasNameError && !hasEmailError && !hasMessageError ) {
-			// submit form
-			console.log('submitting form');
-			emailjs.sendForm('service_rexzi6j', 'template_3uj95nn', contactForm.current, 'yfXGSGjBp-1KKRm84')
-				.then(res => {
-					setFormResponse(res.status === 200);
-					setShowFormResponse(true);
-				}, err => {
-					setFormResponse(false);
-					setShowFormResponse(true);
-					console.error(err);
-				})
+			// set busy 
+			// if busy is true, then contact form should send 
+			setBusy(true);
 		}
 	}
 
@@ -91,14 +106,11 @@ const Home = () => {
 					<img src={logo} height="75px" width="auto" alt="logo" />
 					<div className="d-flex align-items-center justify-content-end" style={{flexGrow: '1'}}>
 						<a href="https://www.instagram.com/oasisvive/" className="media" target="_blank" rel="noopener noreferrer">
-							<InstagramIcon className="footer-icon" />
+							<Instagram className="footer-icon" />
 						</a>
 						<a href="https://www.facebook.com/OasisLives/" className="media" target="_blank" rel="noopener noreferrer" >
-							<FacebookIcon className="footer-icon" />
+							<Facebook className="footer-icon" />
 						</a>
-						{/* <a href="https://twitter.com" className="media">
-							<TwitterIcon className="footer-icon" />
-						</a> */}
 					</div>
 				</div>
 				<div className="d-flex header-content justify-content-center align-items-center flex-wrap" style={{marginTop: '-20px'}}>
@@ -173,7 +185,7 @@ const Home = () => {
 										{ScholarshipRequirements.map((req, ndx) => {
 											return (
 												<div className="d-flex" key={ndx}>
-													<div className="pe-3"><CheckRoundedIcon style={{color: 'green' }} /></div>
+													<div className="pe-3"><CheckRounded style={{color: 'green' }} /></div>
 													<div>{req}</div>
 												</div>
 											);
@@ -186,7 +198,7 @@ const Home = () => {
 											rel="noopener noreferrer"
 										>
 											<button className="apply-button d-flex align-items-center">
-												<DescriptionIcon style={{marginRight: '5px'}} />
+												<Description style={{marginRight: '5px'}} />
 												<span>Apply</span>
 											</button>
 										</a>
@@ -206,7 +218,7 @@ const Home = () => {
 								<TextField 
 									className="w-100 my-3 contact-field"
 									required 
-									variant="filled"
+									variant="outlined"
 									label="Name"
 									id="name"
 									name="name"
@@ -219,7 +231,7 @@ const Home = () => {
 									className="w-100 my-3 contact-field"
 									required 
 									error={isInvalidEmail(contactEmail)}
-									variant="filled"
+									variant="outlined"
 									label="Email"
 									name="email"
 									id="email"
@@ -234,7 +246,7 @@ const Home = () => {
 									required 
 									multiline
 									rows={10}
-									variant="filled"
+									variant="outlined"
 									label="Message"
 									id="message"
 									name="message"
@@ -248,15 +260,21 @@ const Home = () => {
 									type="submit"
 								>
 									<span>Send Email</span>
-									<SendIcon style={{marginLeft: '5px'}} />
+									<Send style={{marginLeft: '5px'}} />
 								</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
+			<Backdrop 
+				sx={{ color: '#2a9df4' }}
+				open={busy}
+			>
+				<CircularProgress color="inherit" />
+			</Backdrop>
 			<Snackbar open={showFormResponse} autoHideDuration={6000} onClose={handleFormResponseClose}>
-				<Alert onClose={handleFormResponseClose} severity={formResponse ? 'success' : 'error'}>
+				<Alert elevation={6} variant="filled" onClose={handleFormResponseClose} severity={formResponse ? 'success' : 'error'}>
 					{formResponse 
 						? 'Message was sent! We will get back to you shortly'
 						: 'Something went wrong. Please email us directly at oasis.vive76@gmail.com'}

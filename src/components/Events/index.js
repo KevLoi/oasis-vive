@@ -1,8 +1,9 @@
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-// import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import {
+    Card, 
+    CardActionArea,
+    CardContent,
+    CardMedia
+} from '@mui/material';
 import eventImage from '../../images/event-image.jpg';
 import './events.css';
 
