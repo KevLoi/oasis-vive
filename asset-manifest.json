@@ -1,27 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f4d8198.chunk.css",
-    "main.js": "/static/js/main.9d03a9ab.chunk.js",
-    "main.js.map": "/static/js/main.9d03a9ab.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.da47cc23.js",
-    "runtime-main.js.map": "/static/js/runtime-main.da47cc23.js.map",
-    "static/css/2.4f8976c6.chunk.css": "/static/css/2.4f8976c6.chunk.css",
-    "static/js/2.55f4a361.chunk.js": "/static/js/2.55f4a361.chunk.js",
-    "static/js/2.55f4a361.chunk.js.map": "/static/js/2.55f4a361.chunk.js.map",
-    "static/js/3.fccefb49.chunk.js": "/static/js/3.fccefb49.chunk.js",
-    "static/js/3.fccefb49.chunk.js.map": "/static/js/3.fccefb49.chunk.js.map",
+    "main.css": "/static/css/main.a94963f2.css",
+    "main.js": "/static/js/main.01dd018c.js",
+    "static/js/787.2ef587ba.chunk.js": "/static/js/787.2ef587ba.chunk.js",
+    "static/media/hero-image.png": "/static/media/hero-image.9c5236ae72e2c4410cf6.png",
+    "static/media/oasis-transparent.png": "/static/media/oasis-transparent.04cbd581f4b16fc94b7e.png",
     "index.html": "/index.html",
-    "static/css/2.4f8976c6.chunk.css.map": "/static/css/2.4f8976c6.chunk.css.map",
-    "static/css/main.9f4d8198.chunk.css.map": "/static/css/main.9f4d8198.chunk.css.map",
-    "static/js/2.55f4a361.chunk.js.LICENSE.txt": "/static/js/2.55f4a361.chunk.js.LICENSE.txt",
-    "static/media/home.css": "/static/media/hero-image.9c5236ae.png",
-    "static/media/oasis-transparent.04cbd581.png": "/static/media/oasis-transparent.04cbd581.png"
+    "main.a94963f2.css.map": "/static/css/main.a94963f2.css.map",
+    "main.01dd018c.js.map": "/static/js/main.01dd018c.js.map",
+    "787.2ef587ba.chunk.js.map": "/static/js/787.2ef587ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.da47cc23.js",
-    "static/css/2.4f8976c6.chunk.css",
-    "static/js/2.55f4a361.chunk.js",
-    "static/css/main.9f4d8198.chunk.css",
-    "static/js/main.9d03a9ab.chunk.js"
+    "static/css/main.a94963f2.css",
+    "static/js/main.01dd018c.js"
   ]
 }
