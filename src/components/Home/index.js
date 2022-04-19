@@ -174,10 +174,13 @@ const Home = () => {
 						<Paper elevation={10} className="scholarship">
 							<div className="row d-flex">
 								<div className="col-sm-12">
-									<p className="display-6 fw-bold text-start">Desert Community Foundation Scholarship</p>
+									<p className="display-6 fw-bold text-start">
+										Oasis Elementary School Education Scholarship
+									</p>
 									<hr />
 									<p className="text-start py-2 fs-6">
-										In partnership with Oasis Elementary, Oasis Vive, and the Desert Community Foundation, 
+										Thanks to the generosity of Ruth Hunter and Sharon Ratliffe
+										and in partnership with Oasis Elementary, Oasis Vive, and the Desert Community Foundation,
 										this scholarship was created to assist individuals who attended Oasis Elementary school during the years 2009-2010.
 									</p>
 									<div className="text-start">
