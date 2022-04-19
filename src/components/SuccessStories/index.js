@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
+import {
+    Timeline,
+    TimelineItem,
+    TimelineSeparator,
+    TimelineConnector,
+    TimelineContent,
+    TimelineOppositeContent,
+    TimelineDot
+} from '@mui/lab';
+import { Paper } from '@mui/material';
 import avatar from '../../images/myAvatar.png';
 import classNames from 'classnames';
 import './spotlight.css';
@@ -54,16 +55,7 @@ const members = [
         description: 'hello world',
         image: avatar
     },
-]
-
-const useStyles = makeStyles({
-    root: {
-        flex: 'none',
-    },
-    content: {
-        textAlign: 'center',
-    }
-})
+];
 
 const Success = () => {
 
@@ -102,7 +94,7 @@ const Success = () => {
                 {members.map(member => {
                     return (
                         <TimelineItem>
-                            <TimelineOppositeContent classes={{ root: classes.root }}>
+                            <TimelineOppositeContent classes={{ root: 'flex-none' }}>
                                 {member.date}
                             </TimelineOppositeContent>
                             <TimelineSeparator>
