@@ -121,3 +121,9 @@
 a {
     text-decoration: none !important;
 }
+
+#Home .scholarship-winners img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.5rem
+}

@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import logo from '../../images/oasis-transparent.png';
+import Christian from '../../images/Christian.jpg';
+import Pablo from '../../images/Pablo.jpg';
+import Yareli from '../../images/Yareli.jpg';
 import './home.css';
 import {
 	Backdrop,
@@ -12,19 +15,30 @@ import {
 import {
 	Instagram, 
 	Facebook,
-	CheckRounded,
-	Description,
 	Send
 } from '@mui/icons-material';
 import emailjs from '@emailjs/browser';
 
-const ScholarshipRequirements = [
-	'AB540/DACA Students, Eligible/ Residents and citizens',
-	'Must have been enrolled in Kindergarten at Oasis Elementary, beginning with the class of 2009-2010',
-	'Must graduate from an accredited institution within the state of California with a High School Diploma or General Equivalency Diploma',
-	'Must have verification of admittance to an accredited profit or nonprofit institution providing vocational, occupational, and technical or college education on either full-time or part-time basis',
-	'GPA requirement: 2.0 Cumulative'
-];
+const scholarshipWinners = [
+	{
+		image: Christian, 
+		fullName: 'Cristian Villalva', 
+		school: 'CSU San Bernadino',
+		major: 'Information Systems and Technology'
+	},
+	{
+		image: Pablo, 
+		fullName: 'Pablo Ochoa', 
+		school: 'College of the Desert',
+		major: 'Automotive Technology '
+	},
+	{
+		image: Yareli, 
+		fullName: 'Yareli Rodriguez-Espinoza', 
+		school: 'CSU Fullerton',
+		major: 'Civil Engineering'
+	},
+]
 
 const Home = () => {
 
@@ -182,29 +196,19 @@ const Home = () => {
 										Thanks to the generosity of Ruth Hunter and Sharon Ratliffe
 										and in partnership with Oasis Elementary, Oasis Vive, and the Desert Community Foundation,
 										this scholarship was created to assist individuals who attended Oasis Elementary school during the years 2009-2010.
+										The following students are the recipients of the first annual scholarship.
 									</p>
-									<div className="text-start">
-										<p className="fs-5">Eligibility Requirements:</p>
-										{ScholarshipRequirements.map((req, ndx) => {
-											return (
-												<div className="d-flex" key={ndx}>
-													<div className="pe-3"><CheckRounded style={{color: 'green' }} /></div>
-													<div>{req}</div>
-												</div>
-											);
-										})}
-									</div>
-									<div className="text-start pt-4">
-										<a 
-											href="https://docs.google.com/forms/d/1S8AWWWNeiOwMamG7LGu7ikmH6ipnzafOeJN2bwMBCoc/viewform?edit_requested=true" 
-											target="_blank" 
-											rel="noopener noreferrer"
-										>
-											<button className="apply-button d-flex align-items-center">
-												<Description style={{marginRight: '5px'}} />
-												<span>Apply</span>
-											</button>
-										</a>
+									<div className="row scholarship-winners">
+										{scholarshipWinners.map((scholar, index) => (
+											<div className='col-md-4 col-sm-12 text-start mb-3' key={index}>
+												<img src={scholar.image} alt={scholar.fullName} />
+												<p className='lead mb-0'>
+													<span className='fw-bold'>{scholar.fullName}</span>
+												</p>
+												<p className='mb-0'>{scholar.school}</p>
+												<p>{scholar.major}</p>
+											</div>
+										))}
 									</div>
 								</div>
 							</div>
