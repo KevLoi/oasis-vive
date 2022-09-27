@@ -1,0 +1,26 @@
+--- 
+
+name: Build and Deploy React App to Github Pages 
+
+on: 
+  push:
+    branches: [ master ]
+
+jobs: 
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Build
+      run: npm install
+
+    - name: Test 
+      run: npm run test
+
+    - name: Deploy
+      run: |
+        npm run deploy
